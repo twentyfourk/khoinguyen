@@ -1,6 +1,6 @@
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
-const heartBox = $(".heart.clickable");
+const heartBox = $(".clickable");
 const container = $(".container");
 const imageLeft = $(".image.leftpos");
 const imageRight = $(".image.rightpos");
@@ -29,24 +29,3 @@ document.addEventListener("mousemove", function (e) {
     }, 1000);
     body.appendChild(heart);
 });
-let imageLeftNotQuote = true;
-let imageRightNotQuote = true;
-imageLeft.onclick = function (e) {
-    if (imageLeftNotQuote) {
-        imageLeft.src = "./quote1.png";
-        imageLeftNotQuote = false;
-    } else {
-        imageLeft.src = "./firstpic.png";
-        imageLeftNotQuote = true;
-    }
-};
-imageRight.onclick = function (e) {
-    if (imageRightNotQuote) {
-        imageRight.src = "./quote2.png";
-        imageRightNotQuote = false;
-    } else {
-        imageRight.src = "./secondpic.png";
-        imageRightNotQuote = true;
-    }
-};
-const message = "Love You";
