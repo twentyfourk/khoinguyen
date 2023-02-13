@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Niconne&display=swap");
+
+html {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+body {
+    height: 100vh;
+    background: url("./iachay.jpg") no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.images {
+    width: 250px;
+    height: 360px;
+    position: fixed;
+    top: 20%;
+}
+.image {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    pointer-events: all;
+    cursor: pointer;
+}
+.left {
+    left: 64px;
+    transform: rotate(-10deg);
+}
+.right {
+    right: 64px;
+    transform: rotate(10deg);
+}
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 7rem;
+}
+iframe {
+    width: 128px;
+    height: 128px;
+    pointer-events: none;
+}
+.title {
+    font-size: 4rem;
+    text-align: center;
+    color: pink;
+    background: transparent;
+    font-weight: 700;
+    text-shadow: 5px 5px 0px #eb452b, 7px 7px 0px #efa032, 9px 9px 0px #46b59b,
+        11px 11px 0px #017e7f, 13px 13px 0px #052939, 15px 15px 0px #c11a2b,
+        17px 17px 0px #c11a2b;
+    pointer-events: none;
+}
+.heart {
+    margin-top: 80px;
+    height: 70px;
+    width: 70px;
+    background: #f20044;
+    position: relative;
+    transform: rotate(-45deg);
+    box-shadow: -10px 10px 90px #f20044;
+    animation: heart 0.6s linear infinite;
+    cursor: pointer;
+}
+@keyframes heart {
+    0% {
+        transform: rotate(-45deg) scale(0.9);
+    }
+    50% {
+        transform: rotate(-45deg) scale(0.95);
+    }
+    100% {
+        transform: rotate(-45deg) scale(1);
+    }
+}
+.heart::before {
+    content: "";
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    background: #f20044;
+    top: -50%;
+    border-radius: 50px;
+}
+.heart::after {
+    content: "";
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    background: #f20044;
+    right: -50%;
+    border-radius: 50px;
+}
+.letter-container {
+    margin-top: 80px;
+    width: 70vh;
+    height: 160px;
+    background: url("https://img.freepik.com/free-photo/paperboard-texture_95678-72.jpg?w=1800&t=st=1675603287~exp=1675603887~hmac=5d371c00c3baa7f818c3e02b2ea5676cc665ff2781111108510d37d66af6b1fd")
+        no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+}
+.letter-title {
+    text-align: center;
+    text-transform: uppercase;
+}
+.letter-content {
+    margin: 0 8px;
+    font-size: 24px;
+    text-align: center;
+}
+span {
+    position: absolute;
+    background: url("heart.png") no-repeat;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    animation: mouseTrail 1s linear infinite;
+}
+@keyframes mouseTrail {
+    0% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -1000%);
+        opacity: 0;
+        filter: hue-rotate(720deg);
+    }
+}
